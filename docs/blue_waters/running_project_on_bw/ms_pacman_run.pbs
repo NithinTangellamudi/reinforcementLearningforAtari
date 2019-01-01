@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=16:xk
+#PBS -N ms_pacman_0
+#PBS -l walltime=48:00:00
+#PBS -e $PBS_JOBNAME.$PBS_JOBID.err
+#PBS -o $PBS_JOBNAME.$PBS_JOBID.out
+#PBS -M tangell2@illinois.edu
+#PBS -m bea
+cd /mnt/c/scratch/training/tra442
+. /opt/modules/default/init/bash
+module load bwpy/2.0.0-pre1
+module load cudatoolkit
+module load gcc/5.1.0
+module load libpng
+module swap gcc/4.9.3 gcc/5.1.0
+aprun -n 1 -N 1 python3.5 MsPacman_BWReady.py 0

@@ -1,0 +1,3 @@
+For Intro to RL by Barto and Sutton, go to these links for relevant supporting material including some source code: 
+https://github.com/jacob-heglund/reinforcement-learning-an-introduction
+http://incompleteideas.net/book/the-book-2nd.html

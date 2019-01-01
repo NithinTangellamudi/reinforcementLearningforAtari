@@ -1,0 +1,4 @@
+If you find any videos explaining the concepts behind any of these papers, put them in this txt file
+
+Deep Q-Network & Dueling network architectures for deep reinforcement learning
+https://www.youtube.com/watch?v=XjsY8-P4WHM

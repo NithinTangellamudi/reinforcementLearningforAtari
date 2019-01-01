@@ -1,0 +1,16 @@
+### This is an example of a file that generate_pbs.py would generate.  Don't use this for anything, always generate
+### a new PBS file in your running directory!
+
+#!/bin/bash
+#PBS -l nodes=1:ppn=16:xk
+#PBS -N my_training_job_name_0
+#PBS -l walltime=00:30:00
+#PBS -e $PBS_JOBNAME.$PBS_JOBID.err
+#PBS -o $PBS_JOBNAME.$PBS_JOBID.out
+#PBS -m bea
+#PBS -M jheglun2@illinois.edu
+cd C:/home/classes/ie534-project/docs/blue_waters/pbs_stuff
+. /opt/modules/default/init/bash
+module load bwpy/2.0.0-pre1
+module load cudatoolkit
+aprun -n 1 -N 1 python3.6 test_job.py 0

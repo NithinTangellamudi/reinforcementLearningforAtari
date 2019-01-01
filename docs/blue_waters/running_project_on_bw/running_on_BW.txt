@@ -1,0 +1,16 @@
+module add ccm
+ccmlogin
+module load bwpy/2.0.0-pre1
+module load cudatoolkit
+module swap PrgEnv-cray prgEnv-gnu
+module load gcc/5.1.0
+~~~ if it tells you that there is some other gcc/X.X.X loaded then run
+  module swap gcc/X.X.X gcc/5.1.0
+~~~
+module load libpng
+git clone https://github.com/openai/atari-py.git
+cd ~/.local/lib/python3.5/site-packages/
+rm -rf atari_py*
+cd ~/atari-py
+python setup.py build
+python setup.py install --user
